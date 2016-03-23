@@ -1,5 +1,17 @@
 <div>
-  <h3>All Artists</h3>
+  <h3>Artists</h3>
+  <p>Click below to see album details.</p>
+
+  <ul>
+    {{#each model as |artist|}}
+      {{#link-to 'artist' artist}}
+        <li>{{artist.name}}</li>
+      {{/link-to}}
+      <br>
+    {{else}}
+        No artists found.
+    {{/each}}
+  </ul>
 
   {{outlet}}
 </div>

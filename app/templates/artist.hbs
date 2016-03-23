@@ -1,3 +1,16 @@
-<h2>Details</h2>
+<div class="artist">
+  <h2 class="artist-name">{{model.name}}</h2>
 
-{{outlet}}
+  <ul>
+    {{#each model.album as |album|}}
+      {{#link-to 'album' album}}
+        <li>{{album.name}}</li>
+      {{/link-to}}
+      <br>
+    {{else}}
+        No albums found.
+    {{/each}}
+  </ul>
+
+  {{outlet}}
+</div>

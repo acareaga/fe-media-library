@@ -1,7 +1,13 @@
-<!-- name
-year
-artistId
-totalSold
-comments -->
+<div class="album">
+  <h3 class="album-name">{{model.name}} by {{model.artist.name}}</h3>
 
-{{outlet}}
+  <ul>
+    <li>Name: {{model.name}}</li>
+    <li>Year: {{model.year}}</li>
+    <li>Sales: {{model.totalSold}}</li>
+  </ul>
+
+  Comments: {{model.comments}}
+
+  {{outlet}}
+</div>

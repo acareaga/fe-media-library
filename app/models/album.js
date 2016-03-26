@@ -2,10 +2,12 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
+  artist: DS.belongsTo('artist', {
+    async: true
+  }),
   year: DS.attr('number'),
-  artistId: DS.attr('number'),
   totalSold: DS.attr('number'),
-  commentIds: DS.hasMany('comment', {
+  comments: DS.hasMany('comment', {
     async: true
   })
 });

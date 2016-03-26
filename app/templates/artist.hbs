@@ -1,8 +1,9 @@
 <div class="artist">
-  <h2 class="artist-name">{{model.name}}</h2>
+  <h3 class="artist-name">{{model.name}}</h3>
+  <p>Click below to see album details.</p>
 
   <ul>
-    {{#each model.album as |album|}}
+    {{#each model.albums key="id" as |album|}}
       {{#link-to 'album' album}}
         <li>{{album.name}}</li>
       {{/link-to}}

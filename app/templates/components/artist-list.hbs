@@ -1,0 +1,11 @@
+{{#each sortedArtists as |artist|}}
+  {{#link-to 'artist' artist}}
+    <li>{{artist.name}}</li>
+  {{/link-to}}<br>
+{{else}}
+    No artists found.
+{{/each}}
+<br>
+{{input type='checkbox' checked=reverseSort}} Sort Artists by Name
+
+{{yield}}

@@ -7,7 +7,9 @@
     <li>Sales: {{model.totalSold}}</li>
   </ul>
 
-  Comments: {{model.comments}}
 
+  <h4>Comments:</h4>
+  {{comment-list model=model.comments}}
+  
   {{outlet}}
 </div>

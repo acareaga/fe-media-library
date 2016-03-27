@@ -1,17 +1,8 @@
 <div class="artist">
   <h3 class="artist-name">{{model.name}}</h3>
-  <p>Click below to see album details.</p>
+  <p>Click below to see album details for {{model.name}}.</p>
 
-  <ul>
-    {{#each model.albums key="id" as |album|}}
-      {{#link-to 'album' album}}
-        <li>{{album.name}}</li>
-      {{/link-to}}
-      <br>
-    {{else}}
-        No albums found.
-    {{/each}}
-  </ul>
+  {{album-list model=model}}
 
   {{outlet}}
 </div>

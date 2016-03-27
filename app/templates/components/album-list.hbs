@@ -1,0 +1,9 @@
+{{#each model.albums key="id" as |album|}}
+  {{#link-to 'album' album}}
+    <li>{{album.name}}</li><br>
+  {{/link-to}}
+{{else}}
+    No albums found.
+{{/each}}
+
+{{yield}}

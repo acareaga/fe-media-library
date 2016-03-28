@@ -8,19 +8,15 @@ moduleForComponent('artist-list', 'Integration | Component | artist list', {
 test('it renders', function(assert) {
   assert.expect(2);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{artist-list}}`);
 
   assert.equal(this.$().text().trim(), '');
 
-  // Template block usage:
   this.render(hbs`
     {{#artist-list}}
-      template block text
+      New Age Thing
     {{/artist-list}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'New Age Thing');
 });

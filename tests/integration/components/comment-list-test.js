@@ -8,19 +8,15 @@ moduleForComponent('comment-list', 'Integration | Component | comment list', {
 test('it renders', function(assert) {
   assert.expect(2);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{comment-list}}`);
 
   assert.equal(this.$().text().trim(), '');
 
-  // Template block usage:
   this.render(hbs`
     {{#comment-list}}
-      template block text
+      "Good album, but I liked the first one." - Evan Willum
     {{/comment-list}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), '"Good album, but I liked the first one." - Evan Willum');
 });

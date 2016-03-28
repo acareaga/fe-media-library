@@ -1,5 +1,5 @@
 import { moduleForModel, test } from 'ember-qunit';
-import Ember from 'ember';
+// import Ember from 'ember';
 
 moduleForModel('album', 'Unit | Model | album', {
   // Specify the other units that are required for this test.
